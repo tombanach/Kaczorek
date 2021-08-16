@@ -2,6 +2,8 @@
 {
     public class Klient
     {
+        public static int Licznik { get; set; }
+
         private string _nazwisko;
 
         public string Nazwisko
@@ -23,7 +25,18 @@
         {
             get
             {
-                return Imie + "," + Nazwisko;
+                string imieNazwisko = Imie;
+
+                if (!string.IsNullOrWhiteSpace(Nazwisko))
+                {
+                    if (!string.IsNullOrWhiteSpace(imieNazwisko))
+                    {
+                        imieNazwisko += ", ";
+                    }
+                    imieNazwisko += Nazwisko;
+                }
+
+                return imieNazwisko;
             }
         }
 
