@@ -1,7 +1,10 @@
-﻿namespace Kaczorek.BL
+﻿using System.Collections.Generic;
+
+namespace Kaczorek.BL
 {
     public class Klient
     {
+        // Właściwości
         public static int Licznik { get; set; }
 
         private string _nazwisko;
@@ -40,5 +43,49 @@
             }
         }
 
+        // Metody
+        public bool Zwaliduj()
+        {
+            var poprawne = true;
+
+            if (string.IsNullOrWhiteSpace(Nazwisko))
+                poprawne = false;
+
+            if (string.IsNullOrWhiteSpace(Email))
+                poprawne = false;
+
+            return poprawne;
+        }
+
+        /// <summary>
+        /// Zapisuje klienta
+        /// </summary>
+        /// <returns></returns>
+        public bool Zapisz()
+        {
+            // Kod który zapisuje zdefiniowanego klienta
+            return true;
+        }
+
+        /// <summary>
+        /// Pobieramy jednego klienta
+        /// </summary>
+        /// <param name="klientId"></param>
+        /// <returns></returns>
+        public Klient Pobierz(int klientId)
+        {
+            // Kod który pobiera określonego klienta
+            return new Klient();
+        }
+
+        /// <summary>
+        /// Pobieramy wszystkich klientów
+        /// </summary>
+        /// <returns></returns>
+        public List<Klient> Pobierz()
+        {
+            // Kod który pobiera wszystkich klientów
+            return new List<Klient>();
+        }
     }
 }
