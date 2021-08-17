@@ -4,6 +4,16 @@ namespace Kaczorek.BL
 {
     public class Klient
     {
+        public Klient()
+        {
+
+        }
+
+        public Klient(int klientId)
+        {
+            KlientId = klientId;
+        }
+
         // Właściwości
         public static int Licznik { get; set; }
 
