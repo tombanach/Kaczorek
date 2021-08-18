@@ -5,6 +5,8 @@ namespace Kaczorek.BL
 {
     public class Zamowienie
     {
+        #region Konstruktor
+
         public Zamowienie()
         {
 
@@ -15,8 +17,18 @@ namespace Kaczorek.BL
             ZamowienieId = zamowienieId;
         }
 
+        #endregion
+        #region Właściwości
+
         public int ZamowienieId { get; private set; }
         public DateTimeOffset? DataZamowienia { get; set; }
+
+        public List<PozycjaZamowienia> pozycjaZamowienia { get; set; }
+        public int KlientId { get; set; }
+        public int AdresDostawyId { get; set; }
+
+        #endregion
+        #region Metody
 
         // Metody
         /// <summary>
@@ -63,5 +75,7 @@ namespace Kaczorek.BL
             // Kod który pobiera wszystkie zamowienia
             return new List<Zamowienie>();
         }
+
+        #endregion
     }
 }

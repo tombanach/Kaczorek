@@ -1,9 +1,18 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 
 namespace Kaczorek.BL
 {
     public class KlientRepository
-    {      
+    {    
+        private AdresRepository adresRepository { get; set; }
+
+        public KlientRepository()
+        {
+            adresRepository = new AdresRepository();
+        }
+
+
         /// <summary>
         /// Pobieramy jednego klienta
         /// </summary>
@@ -13,6 +22,7 @@ namespace Kaczorek.BL
         {
             // Tworzymy instancję klasy klienta
             Klient klient = new Klient(klientId);
+            klient.ListaAdresow = adresRepository.PobierzPoKlientId(klientId).ToList();
 
             // Kod który pobiera określonego klienta
 
