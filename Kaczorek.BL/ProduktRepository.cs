@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 namespace Kaczorek.BL
 {
@@ -13,6 +14,9 @@ namespace Kaczorek.BL
         {
             // Tworzenie instancji produktu
             Produkt produkt = new Produkt(produktId);
+            Object mojObiekt = new Object();
+            Console.WriteLine("Obiekt: " + mojObiekt.ToString());
+            Console.WriteLine("Produkt :" + produkt.ToString());
 
             // Kod który pobiera określony produkt
 

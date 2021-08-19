@@ -109,6 +109,11 @@ namespace Kaczorek.BL
             return new List<Klient>();
         }
 
+        public override string ToString()
+        {
+            return ImieNazwisko;
+        }
+
         #endregion
     }
 }
