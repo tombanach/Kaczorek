@@ -9,6 +9,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Testy", "Testy", "{D53EA3EF
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kaczorek.BLTest", "Kaczorek.BLTest\Kaczorek.BLTest.csproj", "{AC584D22-2326-4DDE-983F-12937FE1161C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common", "Common\Common.csproj", "{6C9DD473-8A7E-4263-9D13-6FFB0257FEE6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommonTest", "CommonTest\CommonTest.csproj", "{DD40A951-A917-4EDC-BFBA-0DE6E498C6E7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -23,12 +27,21 @@ Global
 		{AC584D22-2326-4DDE-983F-12937FE1161C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AC584D22-2326-4DDE-983F-12937FE1161C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AC584D22-2326-4DDE-983F-12937FE1161C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6C9DD473-8A7E-4263-9D13-6FFB0257FEE6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6C9DD473-8A7E-4263-9D13-6FFB0257FEE6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6C9DD473-8A7E-4263-9D13-6FFB0257FEE6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6C9DD473-8A7E-4263-9D13-6FFB0257FEE6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DD40A951-A917-4EDC-BFBA-0DE6E498C6E7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DD40A951-A917-4EDC-BFBA-0DE6E498C6E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DD40A951-A917-4EDC-BFBA-0DE6E498C6E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DD40A951-A917-4EDC-BFBA-0DE6E498C6E7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{AC584D22-2326-4DDE-983F-12937FE1161C} = {D53EA3EF-C1F5-477F-98E8-1644979ED3C9}
+		{DD40A951-A917-4EDC-BFBA-0DE6E498C6E7} = {D53EA3EF-C1F5-477F-98E8-1644979ED3C9}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {8BAF87E8-6196-442B-9B51-9D024E6C5F7C}

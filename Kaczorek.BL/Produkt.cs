@@ -1,10 +1,13 @@
-﻿using System;
+﻿using Common;
+using System;
 using System.Collections.Generic;
 
 namespace Kaczorek.BL
 {
     public class Produkt : KlasaBazowa
     {
+        #region Konstruktory
+
         public Produkt()
         {
 
@@ -15,10 +18,25 @@ namespace Kaczorek.BL
             ProduktId = produktId;
         }
 
+        #endregion
+        #region Właściwości
+
         public int ProduktId { get; private set; }
         public Decimal? AktualnaCena { get; set; }
         public string Opis { get; set; }
-        public string NazwaProduktu { get; set; }
+
+        private string _NazwaProduktu;
+        public string NazwaProduktu
+        {
+            get
+            {
+                return _NazwaProduktu.WstawSpacje();
+            }
+            set { _NazwaProduktu = value; }
+        }
+
+        #endregion
+        #region Metody
 
         // Metody
         /// <summary>
@@ -72,5 +90,7 @@ namespace Kaczorek.BL
         {
             return NazwaProduktu;
         }
+
+        #endregion
     }
 }
