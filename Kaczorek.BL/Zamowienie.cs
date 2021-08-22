@@ -1,9 +1,10 @@
-﻿using System;
+﻿using Common;
+using System;
 using System.Collections.Generic;
 
 namespace Kaczorek.BL
 {
-    public class Zamowienie : KlasaBazowa
+    public class Zamowienie : KlasaBazowa, ILogowanie
     {
         #region Konstruktor
 
@@ -79,6 +80,14 @@ namespace Kaczorek.BL
         public override string ToString()
         {
             return DataZamowienia.Value.Date + " (" + ZamowienieId + ")";
+        }
+
+        public string Log()
+        {
+            var log = ZamowienieId + ": " +
+                "Data: " + DataZamowienia.Value.Date + " " +
+                "Status: " + StanObiektu.ToString();
+            return log;
         }
 
         #endregion

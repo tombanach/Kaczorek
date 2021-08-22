@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace Kaczorek.BL
 {
-    public class Produkt : KlasaBazowa
+    public class Produkt : KlasaBazowa, ILogowanie
     {
         #region Konstruktory
 
@@ -89,6 +89,16 @@ namespace Kaczorek.BL
         public override string ToString()
         {
             return NazwaProduktu;
+        }
+
+        public string Log()
+        {
+            var log = ProduktId + ": " +
+                NazwaProduktu + " " +
+                "Opis: " + Opis + " " +
+                "Status: " + StanObiektu.ToString();
+
+            return log;
         }
 
         #endregion
